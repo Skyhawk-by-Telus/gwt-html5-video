@@ -11,24 +11,20 @@ import fr.hd3d.html5.video.client.handlers.VideoErrorHandler;
  * @author michael.guiral
  * 
  */
-public class VideoErrorEvent extends GwtEvent<VideoErrorHandler>
-{
-    private static final Type<VideoErrorHandler> TYPE = new Type<VideoErrorHandler>();
+public class VideoErrorEvent extends GwtEvent<VideoErrorHandler> {
+	private static final Type<VideoErrorHandler> TYPE = new Type<>();
 
-    public static Type<VideoErrorHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoErrorHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoErrorHandler handler)
-    {
-        handler.onError(this);
-    }
+	@Override
+	protected void dispatch(VideoErrorHandler handler) {
+		handler.onError(this);
+	}
 
-    @Override
-    public Type<VideoErrorHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoErrorHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

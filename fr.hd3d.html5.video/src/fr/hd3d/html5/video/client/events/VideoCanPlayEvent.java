@@ -13,24 +13,20 @@ import fr.hd3d.html5.video.client.handlers.VideoCanPlayHandler;
  * @author michael.guiral
  * 
  */
-public class VideoCanPlayEvent extends GwtEvent<VideoCanPlayHandler>
-{
-    private static final Type<VideoCanPlayHandler> TYPE = new Type<VideoCanPlayHandler>();
+public class VideoCanPlayEvent extends GwtEvent<VideoCanPlayHandler> {
+	private static final Type<VideoCanPlayHandler> TYPE = new Type<>();
 
-    public static Type<VideoCanPlayHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoCanPlayHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoCanPlayHandler handler)
-    {
-        handler.onCanPlay(this);
-    }
+	@Override
+	protected void dispatch(VideoCanPlayHandler handler) {
+		handler.onCanPlay(this);
+	}
 
-    @Override
-    public Type<VideoCanPlayHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoCanPlayHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

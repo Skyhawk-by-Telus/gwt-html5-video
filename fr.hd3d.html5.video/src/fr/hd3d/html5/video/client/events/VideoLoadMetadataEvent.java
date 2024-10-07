@@ -11,24 +11,20 @@ import fr.hd3d.html5.video.client.handlers.VideoLoadMetadataHandler;
  * @author michael.guiral
  * 
  */
-public class VideoLoadMetadataEvent extends GwtEvent<VideoLoadMetadataHandler>
-{
-    private static final Type<VideoLoadMetadataHandler> TYPE = new Type<VideoLoadMetadataHandler>();
+public class VideoLoadMetadataEvent extends GwtEvent<VideoLoadMetadataHandler> {
+	private static final Type<VideoLoadMetadataHandler> TYPE = new Type<>();
 
-    public static Type<VideoLoadMetadataHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoLoadMetadataHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoLoadMetadataHandler handler)
-    {
-        handler.onMetadataLoaded(this);
-    }
+	@Override
+	protected void dispatch(VideoLoadMetadataHandler handler) {
+		handler.onMetadataLoaded(this);
+	}
 
-    @Override
-    public Type<VideoLoadMetadataHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoLoadMetadataHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

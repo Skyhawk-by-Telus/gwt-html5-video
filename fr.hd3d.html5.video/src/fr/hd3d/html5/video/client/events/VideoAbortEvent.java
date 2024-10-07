@@ -11,24 +11,20 @@ import fr.hd3d.html5.video.client.handlers.VideoAbortHandler;
  * @author michael.guiral
  * 
  */
-public class VideoAbortEvent extends GwtEvent<VideoAbortHandler>
-{
-    private static final Type<VideoAbortHandler> TYPE = new Type<VideoAbortHandler>();
+public class VideoAbortEvent extends GwtEvent<VideoAbortHandler> {
+	private static final Type<VideoAbortHandler> TYPE = new Type<>();
 
-    public static Type<VideoAbortHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoAbortHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoAbortHandler handler)
-    {
-        handler.onAbort(this);
-    }
+	@Override
+	protected void dispatch(VideoAbortHandler handler) {
+		handler.onAbort(this);
+	}
 
-    @Override
-    public Type<VideoAbortHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoAbortHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

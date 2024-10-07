@@ -12,24 +12,20 @@ import fr.hd3d.html5.video.client.handlers.VideoSeekingHandler;
  * @author michael.guiral
  * 
  */
-public class VideoSeekingEvent extends GwtEvent<VideoSeekingHandler>
-{
-    private static final Type<VideoSeekingHandler> TYPE = new Type<VideoSeekingHandler>();
+public class VideoSeekingEvent extends GwtEvent<VideoSeekingHandler> {
+	private static final Type<VideoSeekingHandler> TYPE = new Type<>();
 
-    public static Type<VideoSeekingHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoSeekingHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoSeekingHandler handler)
-    {
-        handler.onSeeking(this);
-    }
+	@Override
+	protected void dispatch(VideoSeekingHandler handler) {
+		handler.onSeeking(this);
+	}
 
-    @Override
-    public Type<VideoSeekingHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoSeekingHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

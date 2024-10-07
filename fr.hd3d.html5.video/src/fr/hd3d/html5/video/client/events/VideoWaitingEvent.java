@@ -12,24 +12,20 @@ import fr.hd3d.html5.video.client.handlers.VideoWaitingHandler;
  * @author michael.guiral
  * 
  */
-public class VideoWaitingEvent extends GwtEvent<VideoWaitingHandler>
-{
-    private static final Type<VideoWaitingHandler> TYPE = new Type<VideoWaitingHandler>();
+public class VideoWaitingEvent extends GwtEvent<VideoWaitingHandler> {
+	private static final Type<VideoWaitingHandler> TYPE = new Type<>();
 
-    public static Type<VideoWaitingHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoWaitingHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoWaitingHandler handler)
-    {
-        handler.onWaiting(this);
-    }
+	@Override
+	protected void dispatch(VideoWaitingHandler handler) {
+		handler.onWaiting(this);
+	}
 
-    @Override
-    public Type<VideoWaitingHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoWaitingHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

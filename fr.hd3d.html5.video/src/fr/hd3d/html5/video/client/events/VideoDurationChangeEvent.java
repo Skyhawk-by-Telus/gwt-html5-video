@@ -11,24 +11,20 @@ import fr.hd3d.html5.video.client.handlers.VideoDurationChangeHandler;
  * @author michael.guiral
  * 
  */
-public class VideoDurationChangeEvent extends GwtEvent<VideoDurationChangeHandler>
-{
-    private static final Type<VideoDurationChangeHandler> TYPE = new Type<VideoDurationChangeHandler>();
+public class VideoDurationChangeEvent extends GwtEvent<VideoDurationChangeHandler> {
+	private static final Type<VideoDurationChangeHandler> TYPE = new Type<>();
 
-    public static Type<VideoDurationChangeHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoDurationChangeHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoDurationChangeHandler handler)
-    {
-        handler.onDurationChange(this);
-    }
+	@Override
+	protected void dispatch(VideoDurationChangeHandler handler) {
+		handler.onDurationChange(this);
+	}
 
-    @Override
-    public Type<VideoDurationChangeHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoDurationChangeHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

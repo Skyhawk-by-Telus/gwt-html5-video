@@ -12,24 +12,20 @@ import fr.hd3d.html5.video.client.handlers.VideoVolumeChangeHandler;
  * @author michael.guiral
  * 
  */
-public class VideoVolumeChangeEvent extends GwtEvent<VideoVolumeChangeHandler>
-{
-    private static final Type<VideoVolumeChangeHandler> TYPE = new Type<VideoVolumeChangeHandler>();
+public class VideoVolumeChangeEvent extends GwtEvent<VideoVolumeChangeHandler> {
+	private static final Type<VideoVolumeChangeHandler> TYPE = new Type<>();
 
-    public static Type<VideoVolumeChangeHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoVolumeChangeHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoVolumeChangeHandler handler)
-    {
-        handler.onVolumeChange(this);
-    }
+	@Override
+	protected void dispatch(VideoVolumeChangeHandler handler) {
+		handler.onVolumeChange(this);
+	}
 
-    @Override
-    public Type<VideoVolumeChangeHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoVolumeChangeHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

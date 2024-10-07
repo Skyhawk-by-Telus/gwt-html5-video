@@ -11,24 +11,20 @@ import fr.hd3d.html5.video.client.handlers.VideoLoadStartHandler;
  * @author michael.guiral
  * 
  */
-public class VideoLoadStartEvent extends GwtEvent<VideoLoadStartHandler>
-{
-    private static final Type<VideoLoadStartHandler> TYPE = new Type<VideoLoadStartHandler>();
+public class VideoLoadStartEvent extends GwtEvent<VideoLoadStartHandler> {
+	private static final Type<VideoLoadStartHandler> TYPE = new Type<>();
 
-    public static Type<VideoLoadStartHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoLoadStartHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoLoadStartHandler handler)
-    {
-        handler.onLoadStart(this);
-    }
+	@Override
+	protected void dispatch(VideoLoadStartHandler handler) {
+		handler.onLoadStart(this);
+	}
 
-    @Override
-    public Type<VideoLoadStartHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoLoadStartHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

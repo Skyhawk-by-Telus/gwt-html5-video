@@ -11,24 +11,20 @@ import fr.hd3d.html5.video.client.handlers.VideoPauseHandler;
  * @author michael.guiral
  * 
  */
-public class VideoPauseEvent extends GwtEvent<VideoPauseHandler>
-{
-    private static final Type<VideoPauseHandler> TYPE = new Type<VideoPauseHandler>();
+public class VideoPauseEvent extends GwtEvent<VideoPauseHandler> {
+	private static final Type<VideoPauseHandler> TYPE = new Type<>();
 
-    public static Type<VideoPauseHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoPauseHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoPauseHandler handler)
-    {
-        handler.onPause(this);
-    }
+	@Override
+	protected void dispatch(VideoPauseHandler handler) {
+		handler.onPause(this);
+	}
 
-    @Override
-    public Type<VideoPauseHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoPauseHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

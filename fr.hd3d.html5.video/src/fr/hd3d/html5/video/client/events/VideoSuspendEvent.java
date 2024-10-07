@@ -12,24 +12,20 @@ import fr.hd3d.html5.video.client.handlers.VideoSuspendHandler;
  * @author michael.guiral
  * 
  */
-public class VideoSuspendEvent extends GwtEvent<VideoSuspendHandler>
-{
-    private static final Type<VideoSuspendHandler> TYPE = new Type<VideoSuspendHandler>();
+public class VideoSuspendEvent extends GwtEvent<VideoSuspendHandler> {
+	private static final Type<VideoSuspendHandler> TYPE = new Type<>();
 
-    public static Type<VideoSuspendHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoSuspendHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoSuspendHandler handler)
-    {
-        handler.onSuspend(this);
-    }
+	@Override
+	protected void dispatch(VideoSuspendHandler handler) {
+		handler.onSuspend(this);
+	}
 
-    @Override
-    public Type<VideoSuspendHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoSuspendHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

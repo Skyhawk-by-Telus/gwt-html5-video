@@ -11,24 +11,20 @@ import fr.hd3d.html5.video.client.handlers.VideoEmptyHandler;
  * @author michael.guiral
  * 
  */
-public class VideoEmptyEvent extends GwtEvent<VideoEmptyHandler>
-{
-    private static final Type<VideoEmptyHandler> TYPE = new Type<VideoEmptyHandler>();
+public class VideoEmptyEvent extends GwtEvent<VideoEmptyHandler> {
+	private static final Type<VideoEmptyHandler> TYPE = new Type<>();
 
-    public static Type<VideoEmptyHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoEmptyHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoEmptyHandler handler)
-    {
-        handler.onEmptyState(this);
-    }
+	@Override
+	protected void dispatch(VideoEmptyHandler handler) {
+		handler.onEmptyState(this);
+	}
 
-    @Override
-    public Type<VideoEmptyHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoEmptyHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

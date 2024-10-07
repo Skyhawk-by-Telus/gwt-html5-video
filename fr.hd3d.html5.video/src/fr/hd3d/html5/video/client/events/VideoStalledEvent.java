@@ -11,24 +11,20 @@ import fr.hd3d.html5.video.client.handlers.VideoStalledHandler;
  * @author michael.guiral
  * 
  */
-public class VideoStalledEvent extends GwtEvent<VideoStalledHandler>
-{
-    private static final Type<VideoStalledHandler> TYPE = new Type<VideoStalledHandler>();
+public class VideoStalledEvent extends GwtEvent<VideoStalledHandler> {
+	private static final Type<VideoStalledHandler> TYPE = new Type<>();
 
-    public static Type<VideoStalledHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoStalledHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoStalledHandler handler)
-    {
-        handler.onStalled(this);
-    }
+	@Override
+	protected void dispatch(VideoStalledHandler handler) {
+		handler.onStalled(this);
+	}
 
-    @Override
-    public Type<VideoStalledHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoStalledHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

@@ -12,24 +12,20 @@ import fr.hd3d.html5.video.client.handlers.VideoCanPlayThroughHandler;
  * @author michael.guiral
  * 
  */
-public class VideoCanPlayThroughEvent extends GwtEvent<VideoCanPlayThroughHandler>
-{
-    private static final Type<VideoCanPlayThroughHandler> TYPE = new Type<VideoCanPlayThroughHandler>();
+public class VideoCanPlayThroughEvent extends GwtEvent<VideoCanPlayThroughHandler> {
+	private static final Type<VideoCanPlayThroughHandler> TYPE = new Type<>();
 
-    public static Type<VideoCanPlayThroughHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoCanPlayThroughHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoCanPlayThroughHandler handler)
-    {
-        handler.onCanPlayThrough(this);
-    }
+	@Override
+	protected void dispatch(VideoCanPlayThroughHandler handler) {
+		handler.onCanPlayThrough(this);
+	}
 
-    @Override
-    public Type<VideoCanPlayThroughHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoCanPlayThroughHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

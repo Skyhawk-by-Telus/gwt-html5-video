@@ -11,24 +11,20 @@ import fr.hd3d.html5.video.client.handlers.VideoRateChangeHandler;
  * @author michael.guiral
  * 
  */
-public class VideoRateChangeEvent extends GwtEvent<VideoRateChangeHandler>
-{
-    private static final Type<VideoRateChangeHandler> TYPE = new Type<VideoRateChangeHandler>();
+public class VideoRateChangeEvent extends GwtEvent<VideoRateChangeHandler> {
+	private static final Type<VideoRateChangeHandler> TYPE = new Type<>();
 
-    public static Type<VideoRateChangeHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoRateChangeHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoRateChangeHandler handler)
-    {
-        handler.onRateChange(this);
-    }
+	@Override
+	protected void dispatch(VideoRateChangeHandler handler) {
+		handler.onRateChange(this);
+	}
 
-    @Override
-    public Type<VideoRateChangeHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoRateChangeHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

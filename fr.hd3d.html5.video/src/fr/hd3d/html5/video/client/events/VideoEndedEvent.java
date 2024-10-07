@@ -11,24 +11,20 @@ import fr.hd3d.html5.video.client.handlers.VideoEndedHandler;
  * @author michael.guiral
  * 
  */
-public class VideoEndedEvent extends GwtEvent<VideoEndedHandler>
-{
-    private static final Type<VideoEndedHandler> TYPE = new Type<VideoEndedHandler>();
+public class VideoEndedEvent extends GwtEvent<VideoEndedHandler> {
+	private static final Type<VideoEndedHandler> TYPE = new Type<>();
 
-    public static Type<VideoEndedHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoEndedHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoEndedHandler handler)
-    {
-        handler.onVideoEnded(this);
-    }
+	@Override
+	protected void dispatch(VideoEndedHandler handler) {
+		handler.onVideoEnded(this);
+	}
 
-    @Override
-    public com.google.gwt.event.shared.GwtEvent.Type<VideoEndedHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public com.google.gwt.event.shared.GwtEvent.Type<VideoEndedHandler> getAssociatedType() {
+		return TYPE;
+	}
 }

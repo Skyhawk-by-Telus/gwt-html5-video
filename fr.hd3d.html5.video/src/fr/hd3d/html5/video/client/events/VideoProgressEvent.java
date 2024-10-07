@@ -11,24 +11,20 @@ import fr.hd3d.html5.video.client.handlers.VideoProgressHandler;
  * @author michael.guiral
  * 
  */
-public class VideoProgressEvent extends GwtEvent<VideoProgressHandler>
-{
-    private static final Type<VideoProgressHandler> TYPE = new Type<VideoProgressHandler>();
+public class VideoProgressEvent extends GwtEvent<VideoProgressHandler> {
+	private static final Type<VideoProgressHandler> TYPE = new Type<>();
 
-    public static Type<VideoProgressHandler> getType()
-    {
-        return TYPE;
-    }
+	public static Type<VideoProgressHandler> getType() {
+		return TYPE;
+	}
 
-    @Override
-    protected void dispatch(VideoProgressHandler handler)
-    {
-        handler.onProgress(this);
-    }
+	@Override
+	protected void dispatch(VideoProgressHandler handler) {
+		handler.onProgress(this);
+	}
 
-    @Override
-    public Type<VideoProgressHandler> getAssociatedType()
-    {
-        return TYPE;
-    }
+	@Override
+	public Type<VideoProgressHandler> getAssociatedType() {
+		return TYPE;
+	}
 }
